@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #364F6B;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.nav {
+    display: flex;
+    height: 86px;
+    background: #00ADB5;
+    align-items: center;
+    justify-content: end;
+    position: fixed;
+    width: 100%;
+    /* opacity: 0.5; */
+    margin-bottom: 30px;
+}
+
+.nav span img {
+    border-radius: 63px;
+    width: 66px;
+    position: absolute;
+    left: 20px;
+    top: 8px;
+    /* transition: box-shadow;
+    transition-property: box-shadow;
+    transition-duration: 2s;
+    transition-timing-function: ease-in; */
+    animation-name: logoanim;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 4000ms;
+    /* transform: rotateY(180deg);    */
+}
+
+@keyframes logoanim {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+.item1 {
+    /* flex: 4fr; */
+}
+
+.item {
+    text-decoration: none;
+    color: #EEEEEE;
+    padding: 0px 10px;
+    transition: box-shadow;
+}
+
+.item:hover {
+    border-radius: 8px;
+    background: #FFC7C7;
+    color: #112D4E;
+    padding: 5px;
+    box-shadow: 5px 5px 5px #112D4E;
+}
+
+#hr1 {
+    size: 5px;
+    color: red;
+}
+
+.container1 {
+    display: flex;
+    height: 300px;
+    background: #FFC7C7;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    flex-direction: column;
+    color: #355C7D;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.container1 #h1 {
+    position: relative;
+    right: 50px;
+}
+
+.container1 #p1 {
+    /* flex: 100%; */
+    width: 400px;
+    height: 130px;
+    margin-top: 10px;
+    /* border: 1px solid black; */
+}
+
+#learn {
+    /* flex: 100%; */
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #00ADB5;
+    padding: 8px;
+    text-decoration: none;
+    color: #EEEEEE;
+    position: relative;
+    right: 152px;
+    transition: all;
+    /* margin-top: 10px; */
+}
+
+#learn:hover {
+    background: #112D4E;
+    color: #EEEEEE;
+    box-shadow: 5px 5px 3px #E80F88;
+}
+
+.container2 {
+    display: grid;
+    background: #364F6B;
+    column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    /* border-top: 5px solid red; */
+    padding: 50px;
+}
+
+.line .container2 {
+    /* border-top: 10px solid #E80F88; */
+    margin: 50px;
+    /* border-radius: 220px; */
+    animation-name: lineanim;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes lineanim {
+    0% {
+        border-top: 10px solid violet;
+        /* border-radius: 220px; */
+    }
+    20% {
+        border-right: 10px solid indigo;
+        /* border-radius: 220px; */
+    }
+    40% {
+        border-bottom: 10px solid blue;
+        /* border-radius: 220px; */
+    }
+    60% {
+        border-left: 10px solid green;
+        /* border-radius: 220px; */
+        border-radius: 30%;
+    }
+    80% {
+        border-top: 10px solid yellow;
+        /* border-radius: 220px; */
+    }
+    100% {
+        border-top: 10px solid orange;
+        /* border-radius: 220px; */
+    }
+}
+
+.container2 .grid-item {
+    width: 48%;
+    /* height: 20%; */
+    margin: 34px;
+    color: black;
+    border: 2px solid #00ADB5;
+    border-radius: 35px;
+    padding: 20px;
+    background: #CDF0EA;
+    transition: all;
+    transition-duration: 2s;
+}
+
+.container2 .grid-item:hover {
+    transform: rotate3d(1, 1, 1, 45deg);
+}
+
+.container2 .grid-item h1 {
+    text-align: center;
+}
+
+.grid-item-anim1 {
+    animation-name: itemanim1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes itemanim1 {}
+
+
+/* .grid-item{
+
+} */
+
+.grid-item h1 {
+    margin: 2%;
+}
+
+@media screen and (max-width:650px) {
+    .container2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container2 .grid-item {
+        width: 80%;
+    }
+    .container2 .grid-item h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:932px) {
+    .container2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
